@@ -42,15 +42,15 @@ function scrub(e){
 	video.currentTime = scrubTime;
 }
 
-video.addEventListener("click",toogelPlay); //whenever we click on video if it is paused it will be played n vice-vera
-video.addEventListener("play",updateButton); //if video is playing then play-button should be active
-video.addEventListener("pause",updateButton); //if video is not-playing then pause-button should be active
-video.addEventListener("timeUpdate",handleProgress);
-toggle.addEvenListener("click",tooglePlay);
+video.addEventListener('click',toogelPlay); //whenever we click on video if it is paused it will be played n vice-vera
+video.addEventListener('play',updateButton); //if video is playing then play-button should be active
+video.addEventListener('pause',updateButton); //if video is not-playing then pause-button should be active
+video.addEventListener('timeUpdate',handleProgress);
+toggle.addEvenListener('click',tooglePlay);
 
 skipButtons.forEach(button => button.addEventListener('click',skip));
 ranges.forEach(range => range.addEventListener('change',handleRangeUpdate));
-ranges.forEach(range => range.addEventListener('mouseover',handleRangeUpdate));
+ranges.forEach(range => range.addEventListener('mouseove',handleRangeUpdate));
 
 let mousedown = false;
 progress.addEventListener('click',scrub);
